@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ui.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_top = 3.0
+margin_right = 38.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5, 5 )
+text = "score"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 199.0
+margin_top = 12.0
+margin_right = 353.0
+margin_bottom = 65.0
+text = "Generator"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = 216.0
+margin_top = 440.0
+margin_right = 735.0
+margin_bottom = 585.0
+color = Color( 0.0980392, 0.0941176, 0.0941176, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+margin_left = 33.0
+margin_top = 20.0
+margin_right = 79.0
+margin_bottom = 60.0
+text = "test"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
